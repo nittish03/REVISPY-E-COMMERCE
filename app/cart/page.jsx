@@ -42,7 +42,8 @@ const Page = () => {
       toast.dismiss(loading);
       toast.error("Failed to remove product");
     }
-  };  useEffect(() => {
+  };  
+  useEffect(() => {
     if (cartCount > 0) {
       const getTotalProducts = async () => {
         const response = await axios.get("/api/Cart/total-products");
@@ -73,7 +74,7 @@ const Page = () => {
         getTotalProducts();
       }
     }
-  }, [session, cartCount, setCartCount, addToCart,filteredProducts,totalPrice]);
+  }, [, cartCount, setCartCount,totalPrice]);
 
   return (
     <>
